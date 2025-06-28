@@ -343,14 +343,26 @@
 .skills-section {
   padding: 5rem 1.5rem;
 }
-
+.skills-carousel {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  
+}
+  .skills-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
   gap: 1.5rem;
+  width: max-content;
+  animation: scrollCarousel 20s linear infinite;
 }
 
+
 .skill-card {
+ min-width: 200px;
+  flex: 0 0 auto;
   background-color: #1f2937;
   border: 1px solid #374151;
   padding: 1.5rem;
@@ -358,7 +370,14 @@
   text-align: center;
   color: #f3f4f6;
 }
-
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .icon-circle {
   width: 4rem;
   height: 4rem;
@@ -463,7 +482,7 @@
 
 @media (min-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -473,6 +492,7 @@
   border-radius: 1rem;
   overflow: hidden;
   transition: transform 0.3s;
+ margin-bottom: 1.5rem;
 }
 
 .project-card:hover {
@@ -558,6 +578,16 @@
   background-color: rgba(220, 38, 38, 0.2);
   color: #f87171;
 }
+.tag-yellow {
+  background-color: rgba(234, 179, 8, 0.2);
+  color: #facc15;
+}
+.tag-ts {
+  background-color: rgba(59, 130, 246, 0.2); /* azul tipo TypeScript */
+  color: #3b82f6; /* azul principal do TS */
+}
+
+
 
 .repo-link {
   display: inline-flex;

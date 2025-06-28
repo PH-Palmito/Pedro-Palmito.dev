@@ -1,4 +1,37 @@
-    // Mobile menu toggle
+
+
+const carousel = document.querySelector('.skills-carousel');
+const carousel = document.querySelector('.skills-carousel');
+const content = document.getElementById('skills-content');
+
+// Duplica os itens para scroll infinito suave
+content.innerHTML += content.innerHTML;
+
+let scrollStep = 1;
+let delay = 10;
+
+function autoScroll() {
+  if (carousel.scrollLeft >= content.scrollWidth / 2) {
+    carousel.scrollLeft = 0;
+  } else {
+    carousel.scrollLeft += scrollStep;
+  }
+}
+
+let scrollInterval = setInterval(autoScroll, delay);
+
+// Pausar no hover (opcional)
+carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+carousel.addEventListener('mouseleave', () => {
+  scrollInterval = setInterval(autoScroll, delay);
+});
+
+
+
+
+
+
+   // Mobile menu toggle
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
         const menu = document.getElementById('mobile-menu');
         menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
