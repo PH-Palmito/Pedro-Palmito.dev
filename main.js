@@ -95,3 +95,15 @@ backToTopButton.addEventListener('click', function () {
 
         this.reset();
     });
+
+
+  const form = document.querySelector(".contact-form");
+
+  form.addEventListener("submit", function (e) {
+    // Aguarda um tempinho para o Formspree redirecionar o POST
+    setTimeout(() => {
+      alert("Mensagem enviada com sucesso!");
+      form.reset(); // limpa os campos
+    }, 500);
+  });
+

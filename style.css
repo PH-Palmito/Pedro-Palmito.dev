@@ -131,7 +131,7 @@
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -145,7 +145,7 @@
 .hero-text p {
   color: #d1d5db;
   margin-bottom: 2rem;
-  max-width: 32rem;
+  max-width: 40rem;
 }
 
 .hero-buttons {
@@ -213,7 +213,7 @@
 .availability-tag {
   position: absolute;
   bottom: -1rem;
-  right: -1rem;
+  right: 1rem;
   background-color: #1f2937;
   border: 1px solid #374151;
   padding: 0.5rem 1rem;
@@ -253,7 +253,7 @@
 }
 
 .about-text h3 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
@@ -356,7 +356,7 @@
   display: flex;
   gap: 1.5rem;
   width: max-content;
-  animation: scrollCarousel 20s linear infinite;
+  animation: scrollCarousel 30s linear infinite;
 }
 
 
@@ -583,6 +583,9 @@
 
 .gradient-Fokus {
   background: linear-gradient(to bottom, #8B1FF8, #041832);
+}
+.gradient-helia {
+  background: linear-gradient(to right, #10b981, #0797bb);
 }
 
 .project-content {
