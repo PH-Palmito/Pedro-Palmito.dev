@@ -557,7 +557,29 @@
 .project-card:hover {
   transform: translateY(-5px);
 }
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.253);
+  color: #fff;
+  display: flex;
+  align-items: start;
+  padding-top: 60px;
+  justify-content: center;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* evita bloquear o clique */
+  z-index: 10;
+  font-size: 25px;
+}
 
+.project-card:hover .hover-overlay {
+  opacity: 1;
+}
 .project-banner {
   height: 12rem;
   display: flex;
