@@ -1,20 +1,29 @@
 
+const carousel = document.getElementById('skills-carousel');
+const track = document.getElementById('skills-track');
 
-const carousel = document.querySelector('.skills-carousel');
-const carousel = document.querySelector('.skills-carousel');
-const content = document.getElementById('skills-content');
+// Estilo necessário para scroll horizontal
+track.style.display = 'inline-flex';
 
-// Duplica os itens para scroll infinito suave
-content.innerHTML += content.innerHTML;
+// Espaço entre cópias para suavizar transição
+const items = track.querySelectorAll('.skill-card');
+if (items.length > 0) {
+  items[items.length - 1].style.marginRight = '1.5rem';
+}
 
+// Duplica os cards
+const originalContent = track.innerHTML;
+track.innerHTML += originalContent;
+
+// Scroll automático infinito
 let scrollStep = 1;
 let delay = 10;
 
 function autoScroll() {
-  if (carousel.scrollLeft >= content.scrollWidth / 2) {
+  carousel.scrollLeft += scrollStep;
+
+  if (carousel.scrollLeft >= track.scrollWidth / 2) {
     carousel.scrollLeft = 0;
-  } else {
-    carousel.scrollLeft += scrollStep;
   }
 }
 
@@ -25,7 +34,6 @@ carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
 carousel.addEventListener('mouseleave', () => {
   scrollInterval = setInterval(autoScroll, delay);
 });
-
 
 
 

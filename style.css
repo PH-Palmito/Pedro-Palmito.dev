@@ -347,7 +347,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  
+
 }
   .skills-carousel::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
@@ -358,6 +358,7 @@
   width: max-content;
   animation: scrollCarousel 20s linear infinite;
 }
+
 
 
 .skill-card {
@@ -459,6 +460,64 @@
 }
 .bar-fill.cyan-fill {
   background-color: #22d3ee;
+}
+.icon-circle.node {
+  background-color: rgba(139, 195, 74, 0.2); /* verde claro semitransparente */
+  color: #8bc34a; /* verde principal do Node.js */
+}
+
+.bar-fill.node-fill {
+  background-color: #8bc34a;
+}
+.icon-circle.ts {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+.bar-fill.ts-fill {
+  background-color: #3b82f6;
+}
+
+.icon-circle.mongo {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.bar-fill.mongo-fill {
+  background-color: #22c55e;
+}
+
+.icon-circle.github {
+  background-color: rgba(107, 114, 128, 0.2);
+  color: #9ca3af;
+}
+
+.bar-fill.github-fill {
+  background-color: #9ca3af;
+}
+
+.icon-circle.git {
+  background-color: rgba(239, 68, 68, 0.2); /* vermelho claro */
+  color: #ef4444;
+}
+
+.bar-fill.git-fill {
+  background-color: #ef4444;
+}
+.icon-circle.green {
+  background-color: rgba(16, 185, 129, 0.2); /* verde esmeralda */
+  color: #10b981;
+}
+.bar-fill.green-fill {
+  background-color: #10b981;
+}
+.icon-circle.java {
+  background-color: rgba(176, 114, 25, 0.2); /* marrom claro translúcido */
+  color: #b07219; /* marrom escuro */
+}
+
+.bar-fill.java-fill {
+  background-color: #b07219;
 }
 
 /* Repita .icon-circle.blue, .green, etc. e suas .bar-fill conforme cada habilidade */
