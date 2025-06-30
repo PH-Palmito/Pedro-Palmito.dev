@@ -5,6 +5,8 @@
             scroll-behavior: smooth;
              background-color: #111827;
              color: #f3f4f6;
+              max-width: 100%;
+             overflow-x: hidden;
         }
 
         .gradient-text {
@@ -750,6 +752,8 @@
 }
 .contact-section {
   padding: 5rem 1.5rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .section-title {
@@ -783,6 +787,15 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.contact-box,
+.contact-info,
+.contact-form {
+  min-width: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 
 .contact-info h3 {
   font-size: 1.25rem;
