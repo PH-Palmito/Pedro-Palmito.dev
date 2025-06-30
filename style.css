@@ -738,8 +738,12 @@
 }
 
 .btn-github:hover {
-  background-color: #4b5563;
+
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+
 
 .btn-github i {
   margin-right: 0.5rem;
@@ -852,6 +856,11 @@
   background-color: #2563eb;
   color: #ffffff;
 }
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
 .btn-primary:hover {
   background-color: #1d4ed8;
@@ -863,8 +872,12 @@
 }
 
 .btn-secondary:hover {
-  background-color: #4b5563;
+
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+
 
 .btn-primary i,
 .btn-secondary i {
@@ -996,4 +1009,17 @@
 .back-to-top.visible {
   opacity: 1;
   visibility: visible;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
