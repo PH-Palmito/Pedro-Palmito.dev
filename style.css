@@ -318,6 +318,14 @@
   flex-shrink: 0;
 
 }
+@media (max-width: 480px) {
+  .icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 0.75rem;
+  }
+}
+
 
 .icon.blue {
   background-color: rgba(37, 99, 235, 0.2);
@@ -787,6 +795,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 .contact-box,
 .contact-info,
 .contact-form {
