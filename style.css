@@ -519,6 +519,14 @@
 .bar-fill.java-fill {
   background-color: #b07219;
 }
+.icon-circle.github {
+  background-color: rgba(107, 114, 128, 0.2);
+  color: #c9d1d9;
+}
+
+.bar-fill.github-fill {
+  background-color: #6e7681;
+}
 
 /* Repita .icon-circle.blue, .green, etc. e suas .bar-fill conforme cada habilidade */
 .projects-section {
@@ -670,6 +678,19 @@
   background-color: rgba(59, 130, 246, 0.2); /* azul tipo TypeScript */
   color: #3b82f6; /* azul principal do TS */
 }
+.tag-java {
+  background-color: rgba(255, 87, 34, 0.2); /* Laranja queimado */
+  color: #ff5722;
+}
+.tag-postgres {
+  background-color: rgba(37, 99, 235, 0.2); /* Azul escuro */
+  color: #2563eb;
+}
+.tag-jdbc {
+  background-color: rgba(16, 185, 129, 0.2); /* Verde suave */
+  color: #10b981;
+}
+
 
 
 
