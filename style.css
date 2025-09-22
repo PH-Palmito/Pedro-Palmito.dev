@@ -627,7 +627,9 @@
 .gradient-helia {
   background: linear-gradient(to right, #10b981, #0797bb);
 }
-
+.gradient-ponto {
+  background: linear-gradient(to right, #1045b9, #0797bb);
+}
 .project-content {
   padding: 1.5rem;
 }
