@@ -1,93 +1,103 @@
-const carousel = document.getElementById('skills-carousel');
-const track = document.getElementById('skills-track');
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-const backToTopButton = document.getElementById('back-to-top');
-const contactForm = document.getElementById('contact-form');
-
-if (carousel && track) {
-  track.style.display = 'inline-flex';
-
-  const items = track.querySelectorAll('.skill-card');
-  if (items.length > 0) {
-    items[items.length - 1].style.marginRight = '1.5rem';
-  }
-
-  const originalContent = track.innerHTML;
-  track.innerHTML += originalContent;
-
-  const scrollStep = 1;
-  const delay = 10;
-
-  const autoScroll = () => {
-    carousel.scrollLeft += scrollStep;
-
-    if (carousel.scrollLeft >= track.scrollWidth / 2) {
-      carousel.scrollLeft = 0;
-    }
-  };
-
-  let scrollInterval = setInterval(autoScroll, delay);
-
-  carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
-  carousel.addEventListener('mouseleave', () => {
-    scrollInterval = setInterval(autoScroll, delay);
-  });
-}
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+const backToTopButton = document.getElementById("back-to-top");
+const contactForm = document.getElementById("contact-form");
+const formFeedback = document.getElementById("form-feedback");
+const revealItems = document.querySelectorAll(".reveal");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (mobileMenuButton && mobileMenu) {
-  mobileMenuButton.addEventListener('click', function () {
-    mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+  mobileMenuButton.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
+
+    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuButton.innerHTML = isOpen
+      ? '<i class="fas fa-xmark"></i>'
+      : '<i class="fas fa-bars"></i>';
   });
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    const targetId = anchor.getAttribute("href");
+    const targetElement = targetId ? document.querySelector(targetId) : null;
 
-    const targetId = this.getAttribute('href');
-    const targetElement = document.querySelector(targetId);
-
-    if (targetElement) {
-      if (mobileMenu) {
-        mobileMenu.style.display = 'none';
-      }
-
-      window.scrollTo({
-        top: targetElement.offsetTop - 80,
-        behavior: 'smooth'
-      });
+    if (!targetElement) {
+      return;
     }
+
+    event.preventDefault();
+
+    if (mobileMenu) {
+      mobileMenu.classList.remove("open");
+    }
+
+    if (mobileMenuButton) {
+      mobileMenuButton.setAttribute("aria-expanded", "false");
+      mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+
+    window.scrollTo({
+      top: targetElement.offsetTop - 76,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
   });
 });
 
 if (backToTopButton) {
-  window.addEventListener('scroll', function () {
-    if (window.pageYOffset > 300) {
-      backToTopButton.classList.add('visible');
-    } else {
-      backToTopButton.classList.remove('visible');
-    }
-  });
+  window.addEventListener(
+    "scroll",
+    () => {
+      backToTopButton.classList.toggle("visible", window.scrollY > 320);
+    },
+    { passive: true }
+  );
 
-  backToTopButton.addEventListener('click', function () {
+  backToTopButton.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: prefersReducedMotion ? "auto" : "smooth",
     });
   });
 }
 
-if (contactForm) {
-  contactForm.addEventListener('submit', async function (e) {
-    e.preventDefault();
+if (prefersReducedMotion) {
+  revealItems.forEach((item) => item.classList.add("visible"));
+} else {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-    const name = document.getElementById('name').value;
-    const submitButton = contactForm.querySelector('.btn-submit');
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.18,
+    }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+}
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector(".btn-submit");
+    const name = document.getElementById("name")?.value || "Obrigado";
 
     if (submitButton) {
       submitButton.disabled = true;
-      submitButton.textContent = 'Enviando...';
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando';
+    }
+
+    if (formFeedback) {
+      formFeedback.textContent = "Enviando mensagem...";
+      formFeedback.classList.remove("error");
     }
 
     try {
@@ -95,22 +105,28 @@ if (contactForm) {
         method: contactForm.method,
         body: new FormData(contactForm),
         headers: {
-          Accept: 'application/json'
-        }
+          Accept: "application/json",
+        },
       });
 
       if (!response.ok) {
-        throw new Error('Erro no envio');
+        throw new Error("Erro no envio");
       }
 
-      alert(`Obrigado, ${name}! Sua mensagem foi enviada com sucesso. Entrarei em contato em breve.`);
       contactForm.reset();
+
+      if (formFeedback) {
+        formFeedback.textContent = `Mensagem enviada com sucesso. Obrigado, ${name}!`;
+      }
     } catch (error) {
-      alert('Não foi possível enviar sua mensagem agora. Tente novamente em instantes.');
+      if (formFeedback) {
+        formFeedback.textContent = "Nao foi possivel enviar agora. Tente novamente ou fale comigo por email.";
+        formFeedback.classList.add("error");
+      }
     } finally {
       if (submitButton) {
-        submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
         submitButton.disabled = false;
+        submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar mensagem';
       }
     }
   });

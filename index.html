@@ -3,645 +3,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Pedro Palmito, desenvolvedor full-stack e mobile com foco em interfaces, produto e sistemas funcionais.">
     <link rel="icon" href="./assets/icon.png" type="image/png">
-    <title>Pedro Palmito | Desenvolvedor</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pedro Palmito | Full-stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Header/Navigation -->
-   <header class="custom-header">
-  <div class="container">
-    <div class="header-content">
-      <a href="#" class="logo">Pedro Palmito</a>
-
-      <!-- Botão do menu mobile -->
-      <div class="mobile-menu-button">
-        <button id="mobile-menu-button">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <!-- Navegação Desktop -->
-      <nav class="desktop-nav">
-        <a href="#about">Sobre</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contato</a>
-      </nav>
-    </div>
-
-    <!-- Navegação Mobile -->
-    <div id="mobile-menu" class="mobile-nav">
-      <a href="#about">Sobre</a>
-      <a href="#skills">Habilidades</a>
-      <a href="#projects">Projetos</a>
-      <a href="#contact">Contato</a>
-    </div>
-  </div>
-</header>
-
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-  <div class="container hero-container">
-    <div class="hero-text">
-      <h1>Olá, eu sou <span class="gradient-text">Pedro Palmito</span></h1>
-      <h2>Desenvolvedor Full-Stack</h2>
-      <p>Estudante de Engenharia de Software com paixão por criar soluções digitais inovadoras e funcionais.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-primary">Ver Projetos</a>
-        <a href="#contact" class="btn-secondary">Contato</a>
-      </div>
-    </div>
-    <div class="hero-image-wrapper">
-      <div class="outer-circle">
-        <div class="inner-circle">
-          <img src="eu.jpg" alt="">
-        </div>
-      </div>
-      <div class="availability-tag">
-        <span>Disponível para oportunidades</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- About Section -->
-   <section id="about" class="about-section">
-    <div class="fade-in">
-  <div class="container">
-    <h2 class="section-title gradient-text">Sobre Mim</h2>
-
-    <div class="about-content">
-      <div class="about-text">
-        <h3>Estudante de Engenharia de Software</h3>
-        <p>Sou estudante do 4º semestre na Universidade Católica do Salvador (UCSal), com foco em desenvolvimento web e mobile...</p>
-        <p>Atualmente, estou buscando minha primeira oportunidade profissional como desenvolvedor júnior ou estagiário...</p>
-
-        <div class="about-icons">
-          <div><i class="fas fa-map-marker-alt"></i> Salvador - BA</div>
-          <div><i class="fas fa-envelope"></i>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedropalmito.dev@gmail.com" target="_blank">pedropalmito.dev@gmail.com
-
-        </a></div>
-          <div><i class="fab fa-github"></i> <a href="https://github.com/PH-Palmito" target="_blank">PH-Palmito</a></div>
-        </div>
-      </div>
-
-      <div class="about-card">
-        <h4>Educação & Objetivos</h4>
-
-        <div class="card-item">
-          <div class="icon blue">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div>
-            <h5>Engenharia de Software</h5>
-            <p>UCSal - 5º Semestre</p>
-            <p>Previsão de conclusão: Dez/2027</p>
-          </div>
-        </div>
-
-        <div class="card-item">
-          <div class="icon green">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <div>
-            <h5>Objetivo Profissional</h5>
-            <p>Busco uma oportunidade como desenvolvedor júnior ou estagiário para aplicar meus conhecimentos em Java, React, JavaScript e mobile...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <div class="fade-in">
-  <div class="container">
-    <h2 class="section-title gradient-text">Habilidades</h2>
-
-
-     <div class="skills-carousel"  id="skills-carousel">
-  <div class="skills-track" id="skills-track">
-      <div class="skills-grid" id="skillsTrack">
-      <!-- Repita este bloco para cada habilidade -->
-      <div class="skill-card">
-        <div class="icon-circle orange">
-          <i class="fab fa-html5"></i>
-        </div>
-        <h3>HTML5</h3>
-        <div class="bar">
-          <div class="bar-fill orange-fill" style="width: 90%;"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-          <div class="icon-circle blue">
-              <i class="fab fa-css3-alt"></i>
-            </div>
-            <h3>CSS3</h3>
-            <div class="bar">
-                <div class="bar-fill blue-fill" style="width: 80%;"></div>
-            </div>
-        </div>
-        <div class="skill-card">
-            <div class="icon-circle yellow">
-                <i class="fab fa-js"></i>
-            </div>
-            <h3>JavaScript</h3>
-            <div class="bar">
-                <div class="bar-fill yellow-fill" style="width: 80%;"></div>
-            </div>
-        </div>
-        <div class="skill-card">
-            <div class="icon-circle light-blue">
-                <i class="fab fa-react"></i>
-            </div>
-            <h3>React</h3>
-            <div class="bar">
-              <div class="bar-fill light-blue-fill" style="width: 80%;"></div>
-            </div>
-          </div>
-             <div class="skill-card">
-            <div class="icon-circle light-blue">
-                <i class="fab fa-react"></i>
-            </div>
-            <h3>React Native</h3>
-            <div class="bar">
-              <div class="bar-fill light-blue-fill" style="width: 60%;"></div>
-            </div>
-          </div>
-            <div class="skill-card">
-  <div class="icon-circle java">
-    <i class="fas fa-coffee"></i> <!-- ou <i class="fas fa-code"></i> -->
-  </div>
-  <h3>Java</h3>
-  <div class="bar">
-    <div class="bar-fill java-fill" style="width: 70%;"></div>
-  </div>
-      </div>
-
-        <!-- ... Outras habilidades ... -->
-         <div class="skill-card">
-  <div class="icon-circle mid-blue">
-    <i class="fas fa-database"></i>
-  </div>
-  <h3>SQL</h3>
-  <div class="bar">
-    <div class="bar-fill mid-blue-fill" style="width: 75%;"></div>
-  </div>
-          </div>
-
-          <div class="skill-card">
-  <div class="icon-circle node">
-    <i class="fab fa-node"></i>
-  </div>
-  <h3>Node.js</h3>
-  <div class="bar">
-    <div class="bar-fill node-fill" style="width: 70%;"></div>
-  </div>
-
-      </div>
-
-        <div class="skill-card">
-  <div class="icon-circle git">
-    <i class="fab fa-git-alt"></i>
-  </div>
-  <h3>Git</h3>
-  <div class="bar">
-    <div class="bar-fill git-fill" style="width: 90%;"></div>
-  </div>
-
-      </div>
-
-         <div class="skill-card">
-  <div class="icon-circle github">
-    <i class="fab fa-github-alt"></i>
-  </div>
-  <h3>GitHub</h3>
-  <div class="bar">
-    <div class="bar-fill github-fill" style="width: 90%;"></div>
-  </div>
-
-      </div>
-
-        <div class="skill-card">
-  <div class="icon-circle ts">
-    <i class="fab fa-js"></i>
-  </div>
-  <h3>TypeScript</h3>
-  <div class="bar">
-    <div class="bar-fill ts-fill" style="width: 70%;"></div>
-  </div>
-
-      </div>
-
-        <div class="skill-card">
-  <div class="icon-circle cyan">
-    <i class="fas fa-fire"></i>
-  </div>
-  <h3>Firebase</h3>
-  <div class="bar">
-    <div class="bar-fill cyan-fill" style="width: 75%;"></div>
-  </div>
-
-      </div>
-
-        <div class="skill-card">
-  <div class="icon-circle green">
-    <i class="fab fa-python"></i>
-  </div>
-  <h3>Python</h3>
-  <div class="bar">
-    <div class="bar-fill green-fill" style="width: 40%;"></div>
-  </div>
-
-</div>
-
-        <div class="skill-card">
-  <div class="icon-circle blue">
-    <i class="fab fa-bootstrap"></i>
-  </div>
-  <h3>Bootstrap</h3>
-  <div class="bar">
-    <div class="bar-fill blue-fill" style="width: 65%;"></div>
-  </div>
-
-</div>
-
-
-  </div>
-    </div>
-</section>
-
-
-    <!-- Projects Section -->
-   <section id="projects" class="projects-section">
-    <div class="fade-in">
-  <div class="container">
-    <h2 class="section-title gradient-text">Projetos</h2>
-
-    <div class="projects-grid">
-      <!-- Projeto 1 -->
-      <div class="project-card">
-         <div class="hover-overlay">Ir para o Projeto</div>
-        <a href="https://codeconnect-red.vercel.app/" target="_blank">
-        <div class="project-banner gradient-CodeConnect">
-
-          <img src="assets/CodeConnect.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3>📰 CodeConnect - Blog Dev com React</h3>
-          <p>
-            Uma plataforma para conectar desenvolvedores, permitindo compartilhamento de código, colaboração em projetos e networking.
-          </p>
-          <div class="tech-tags">
-            <span class="tag tag-blue">React</span>
-            <span class="tag tag-green">Node.js</span>
-            <span class="tag tag-purple">MongoDB</span>
-          </div>
-          <a href="https://github.com/PH-Palmito/CodeConnect" target="_blank" class="repo-link">
-            <i class="fab fa-github"></i> Ver repositório
-          </a>
-        </div>
-      </a>
-    </div>
-    <div class="project-card">
-  <div class="hover-overlay">Em breve</div>
-  <div class="project-banner gradient-ai">
-    <img src="assets/axel.png" alt="IA Assistente">
-  </div>
-  <div class="project-content">
-    <h3>🤖 Estagiário IA <span class="status-dev">Em desenvolvimento</span></h3>
-    <p>
-      Assistente inteligente local focado em automação de tarefas, execução de comandos e interação por voz. Projetado para operar de forma leve no próprio computador, com suporte a macros, manipulação de arquivos e integração com modelos LLM locais.
-    </p>
-    <div class="tech-tags">
-      <span class="tag tag-green">Python</span>
-      <span class="tag tag-gray">Ollama</span>
-      <span class="tag tag-blue-light">LLM Local</span>
-      <span class="tag tag-orange">Automação</span>
-    </div>
-    <a href="https://github.com/PH-Palmito/estagiario" class="repo-link">
-      <i class="fab fa-github"></i> Em breve
-    </a>
-  </div>
-</div>
-    <!-- Projeto 4 -->
-       <div class="project-card">
-         <div class="hover-overlay">Ver Repositório</div>
-         <div class="project-banner gradient-ponto">
-           <img src="assets/ponto.png" alt="">
-         </div>
-         <div class="project-content">
-           <h3>⏳ PontoCerto</h3>
-           <p>
-            Aplicativo mobile em React Native para registro de ponto diário, cálculo de horas trabalhadas, saldo semanal e mensal, e edição de batidas anteriores.
-           </p>
-           <div class="tech-tags">
-
-             <span class="tag tag-blue-light">React Native</span>
-             <span class="tag tag-green">Node.js</span>
-             <span class="tag tag-ts">TypeScript</span>
-             <span class="tag tag-blue">CSS</span>
-           </div>
-           <a href="https://github.com/PH-Palmito/PontoCerto" class="repo-link">
-             <i class="fab fa-github"></i> Ver repositório
-           </a>
-         </div>
-       </div>
-       <div class="project-card">
-  <div class="hover-overlay">Ver Repositório</div>
-  <div class="project-banner gradient-calirise">
-    <img src="assets/calistenia.webp" alt="CaliRise">
-  </div>
-  <div class="project-content">
-    <h3>💪 CaliRise</h3>
-    <p>
-      Aplicativo mobile que transforma a evolução na calistenia em uma árvore de habilidades interativa, permitindo visualizar progresso, desbloquear exercícios e seguir uma progressão estruturada.
-    </p>
-    <div class="tech-tags">
-      <span class="tag tag-blue-light">React Native</span>
-      <span class="tag tag-ts">TypeScript</span>
-      <span class="tag tag-purple">Expo</span>
-      <span class="tag tag-orange">Gesture Handler</span>
-    </div>
-    <a href="https://github.com/PH-Palmito/CaliRise" class="repo-link">
-      <i class="fab fa-github"></i> Ver repositório
-    </a>
-  </div>
-</div>
-      <!-- Projeto 2 -->
-      <div class="project-card">
-         <div class="hover-overlay">Ir para o projeto</div>
-         <a href="https://ph-palmito.github.io/Fokus-projeto-Alura/" target="_blank">
-         <div class="project-banner gradient-Fokus">
-           <img src="assets/fokus.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3>⏳ Fokus - Pomodoro + To-Do List</h3>
-          <p>
-            Fokus, ele combina um cronômetro Pomodoro com uma lista de tarefas (To-Do List) — ideal para quem quer estudar ou trabalhar com mais foco.
-          </p>
-          <div class="tech-tags">
-            <span class="tag tag-yellow">JavaScript</span>
-            <span class="tag tag-green">HTML</span>
-            <span class="tag tag-blue">CSS</span>
-
-          </div>
-          <a href="https://github.com/PH-Palmito/Fokus-projeto-Alura" class="repo-link">
-            <i class="fab fa-github"></i> Ver repositório
-          </a>
-          </a>
-        </div>
-      </div>
-
-    <!-- Projeto 3 -->
-    <div class="project-card">
-      <div class="hover-overlay">Ver Repositório</div>
-      <div class="project-banner gradient-helia">
-        <img src="assets/Helia - Thumbnails Figma.png" alt="">
-      </div>
-      <div class="project-content">
-        <h3>🏡 Helia</h3>
-        <p>
-          Helia é um aplicativo de aluguel de casas desenvolvido com React Native e TypeScript, oferecendo uma experiência fluida, moderna e intuitiva para quem busca encontrar sua próxima moradia de forma rápida e prática.
-        </p>
-        <div class="tech-tags">
-
-          <span class="tag tag-blue-light">React Native</span>
-          <span class="tag tag-green">Node.js</span>
-          <span class="tag tag-ts">TypeScript</span>
-          <span class="tag tag-red">Firebase</span>
-        </div>
-        <a href="https://github.com/PH-Palmito/Helia" class="repo-link">
-          <i class="fab fa-github"></i> Ver repositório
-        </a>
-      </div>
-    </div>
-<!-- Projeto 5 -->
- <div class="project-card">
-  <div class="hover-overlay">Em breve</div>
-        <div class="project-banner gradient-purple-pink">
-
-           <img src="assets/breve.jpeg" alt="">
-        </div>
-        <div class="project-content">
-          <h3>task-manager</h3>
-          <p>
-            Aplicativo mobile para gerenciamento de tarefas com sincronização em tempo real e notificações personalizadas.
-          </p>
-          <div class="tech-tags">
-            <span class="tag tag-blue-light">React Native</span>
-            <span class="tag tag-red">Firebase</span>
-          </div>
-          <a href="#" class="repo-link disabled">
-            <i class="fab fa-github"></i> Em breve
-          </a>
-        </div>
-      </div>
-<!-- Projeto 6 -->
-  <div class="project-card">
-        <div class="hover-overlay">Ver Repositório</div>
-        <div class="project-banner gradient-Fokus">
-          <img src="assets/lami.jpg" alt="">
-        </div>
-        <div class="project-content">
-          <h3>🧪 Sistema de Gestão de espaços(back-end)</h3>
-          <p>
-            Este projeto tem como objetivo desenvolver um sistema para gerenciamento de espaços laboratoriais em instituições de ensino, permitindo que usuários façam reservas, gestores avaliem solicitações e o histórico de uso seja devidamente registrado.
-          </p>
-          <div class="tech-tags">
-
-            <span class="tag tag-java">Java</span>
-             <span class="tag tag-jdbc">JDBC</span>
-              <span class="tag tag-postgres">Postgress</span>
-
-
-          </div>
-          <a href="https://github.com/PH-Palmito/ReservaEspacosJDBC" class="repo-link">
-            <i class="fab fa-github"></i> Ver repositório
-          </a>
-        </div>
-      </div>
-      <!-- Projeto 7 -->
-  <div class="project-card">
-        <div class="hover-overlay">Ver Repositório</div>
-        <div class="project-banner gradient-Fokus">
-          <img src="assets/restaurante.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3>🍽️ Sistema de Gerenciamento de Restaurante(back-end)</h3>
-          <p>
-            Este projeto é um sistema de gerenciamento para restaurantes, desenvolvido em Java. O sistema simula o controle básico de pedidos, cardápio, mesas e contas, sendo uma aplicação ideal para praticar programação orientada a objetos (POO) e estruturas de dados.
-
-
-          </p>
-          <div class="tech-tags">
-
-            <span class="tag tag-java">Java</span>
-             <span class="tag tag-jdbc">JDBC</span>
-              <span class="tag tag-postgres">Postgress</span>
-
-
-          </div>
-          <a href="https://github.com/PH-Palmito/ReservaEspacosJDBC" class="repo-link">
-            <i class="fab fa-github"></i> Ver repositório
-          </a>
-        </div>
-      </div>
-      <div class="project-card">
-  <div class="hover-overlay">Ver Repositório</div>
-  <div class="project-banner gradient-av1">
-    <img src="assets/Av1Android.png" alt="Av1Android">
-  </div>
-  <div class="project-content">
-    <h3>📱 construção de interface Android</h3>
-    <p>
-      Aplicativo Android desenvolvido como atividade acadêmica, focado na construção de interfaces, navegação entre telas e aplicação de conceitos fundamentais do desenvolvimento mobile nativo.
-    </p>
-    <div class="tech-tags">
-      <span class="tag tag-green">Java/Kotlin</span>
-      <span class="tag tag-blue-light">Android</span>
-      <span class="tag tag-gray">XML</span>
-    </div>
-    <a href="https://github.com/PH-Palmito/Av1Android" class="repo-link">
-      <i class="fab fa-github"></i> Ver repositório
-    </a>
-  </div>
-</div>
-    </div>
-
-  <div class="more-projects">
-    <p>Mais projetos em desenvolvimento...</p>
-    <a href="https://github.com/PH-Palmito" target="_blank" class="btn-github">
-        <i class="fab fa-github"></i> Ver todos no GitHub
-      </a>
-    </div>
-</div>
-  </div>
-</div>
-</section>
-
-
-    <!-- Contact Section -->
- <section id="contact" class="contact-section">
-  <div class="container">
-    <h2 class="section-title gradient-text">Contato</h2>
-
-    <div class="contact-box">
-      <div class="contact-grid">
-        <!-- Info de contato -->
-        <div class="contact-info">
-          <h3>Vamos conversar!</h3>
-          <p>
-            Estou aberto a oportunidades de trabalho, colaborações em projetos ou simplesmente para bater um papo sobre tecnologia.
-          </p>
-
-          <div class="contact-items">
-            <div class="contact-item">
-              <i class="fas fa-envelope icon blue"></i>
-              <div>
-                <h4>Email</h4>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedropalmito.dev@gmail.com" target="_blank">
-                 pedropalmito.dev@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="fab fa-github icon blue"></i>
-              <div>
-                <h4>GitHub</h4>
-                <a href="https://github.com/PH-Palmito" target="_blank">github.com/PH-Palmito</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt icon blue"></i>
-              <div>
-                <h4>Localização</h4>
-                <p>Salvador, Bahia - Brasil</p>
-              </div>
-            </div>
-
-            <div class="resume">
-              <h4>Currículo</h4>
-              <div class="resume-links">
-                <a href="assets/Curriculo_Pedro_Palmito.pdf" target="_blank" class="btn-secondary">
-                  <i class="fas fa-eye"></i> Visualizar
-                </a>
-                <a href="assets/Curriculo_Pedro_Palmito.pdf" download class="btn-primary">
-                  <i class="fas fa-download"></i> Baixar
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Formulário -->
-       <!-- Formulário com Formspree -->
-       <form action="https://formspree.io/f/xanjakdr" method="POST" class="contact-form">
-  <div>
-    <label for="name">Nome</label>
-    <input type="text" id="name" name="name" required />
-  </div>
-
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
-  </div>
-
-  <div>
-    <label for="message">Mensagem</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-  </div>
-
-  <button type="submit" class="btn-submit">
-    <i class="fas fa-paper-plane"></i> Enviar Mensagem
-  </button>
-       </form>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- Footer -->
-   <footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-copy">
-        <p>&copy; 2025 Pedro Palmito. Todos os direitos reservados.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/PH-Palmito" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedropalmito.dev@gmail.com" target="_blank">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/pedro-henrique-palmito" target="_blank" rel="noopener noreferrer">
-         <i class="fab fa-linkedin-in"></i>
+    <header class="site-header" id="top">
+        <div class="shell header-row">
+            <a href="#top" class="brand">
+                <span class="brand-mark">PP</span>
+                <span class="brand-copy">
+                    <strong>Pedro Palmito</strong>
+                    <small>full-stack developer</small>
+                </span>
             </a>
-      </div>
-    </div>
-  </div>
-</footer>
 
+            <button id="mobile-menu-button" class="menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <!-- Back to Top Button -->
-  <button id="back-to-top" class="back-to-top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+            <nav class="desktop-nav" aria-label="Navegacao principal">
+                <a href="#about">Sobre</a>
+                <a href="#stack">Stack</a>
+                <a href="#projects">Projetos</a>
+                <a href="#contact">Contato</a>
+            </nav>
+        </div>
 
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Navegacao mobile">
+            <a href="#about">Sobre</a>
+            <a href="#stack">Stack</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
 
-<script src="main.js"></script>
+    <main>
+        <section class="hero-section">
+            <div class="shell hero-grid">
+                <div class="hero-copy reveal">
+                    <span class="eyebrow">portfolio / product-minded builder</span>
+                    <h1>Construo interfaces e sistemas com cara de produto real.</h1>
+                    <p>
+                        Sou Pedro Palmito, estudante de Engenharia de Software na UCSal, com foco em desenvolvimento web e mobile.
+                        Meu objetivo e criar experiencias claras, funcionais e tecnicamente bem resolvidas com React, React Native, Java e Node.js.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Ver projetos</a>
+                        <a href="https://github.com/PH-Palmito" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+                    </div>
+
+                    <div class="hero-tech-row">
+                        <span>React</span>
+                        <span>React Native</span>
+                        <span>Java</span>
+                        <span>Node.js</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+
+                <div class="hero-panel reveal">
+                    <div class="panel-topbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="panel-profile">
+                        <div class="profile-copy">
+                            <span class="mono-label">current status</span>
+                            <h2>Disponivel para estagio e oportunidade junior</h2>
+                            <p>Salvador - BA / UCSal / foco em produto, front-end e implementacao funcional.</p>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="eu.jpg" alt="Foto de Pedro Palmito">
+                        </div>
+                    </div>
+
+                    <div class="panel-metrics">
+                        <article>
+                            <strong>9</strong>
+                            <span>projetos em destaque</span>
+                        </article>
+                        <article>
+                            <strong>web + mobile</strong>
+                            <span>visao de produto completa</span>
+                        </article>
+                        <article>
+                            <strong>5o semestre</strong>
+                            <span>formacao em andamento</span>
+                        </article>
+                    </div>
+
+                    <div class="panel-focus">
+                        <div class="focus-row">
+                            <span class="mono-label">current focus</span>
+                            <span class="status-dot">active</span>
+                        </div>
+                        <ul>
+                            <li>interfaces em React com hierarquia e clareza</li>
+                            <li>aplicativos em React Native com fluxo consistente</li>
+                            <li>back-end em Java e Node.js com base funcional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="signal-section reveal">
+            <div class="shell signal-grid">
+                <article class="signal-card">
+                    <span class="mono-label">01 / visual control</span>
+                    <p>Hierarquia forte, espaco bem usado e interface pensada para leitura rapida.</p>
+                </article>
+                <article class="signal-card">
+                    <span class="mono-label">02 / technical depth</span>
+                    <p>Projetos com stack visivel, foco claro e estrutura que parece produto de verdade.</p>
+                </article>
+                <article class="signal-card">
+                    <span class="mono-label">03 / implementation</span>
+                    <p>Web, mobile e back-end trabalhando juntos sem cara de template.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section-block">
+            <div class="shell about-grid reveal">
+                <div class="section-copy">
+                    <span class="section-label">Sobre</span>
+                    <h2>Eu gosto de fazer a interface parecer pronta para uso e o sistema parecer confiavel por baixo.</h2>
+                    <p>
+                        Atualmente curso o 5o semestre de Engenharia de Software e venho direcionando meus estudos para desenvolvimento web e mobile.
+                        O que mais me interessa e transformar uma ideia em algo usavel, organizado e com cara de produto.
+                    </p>
+                    <p>
+                        Busco minha primeira oportunidade como desenvolvedor junior ou estagiario para crescer em um time forte, acelerar repertorio tecnico
+                        e contribuir com consistencia desde cedo.
+                    </p>
+                </div>
+
+                <div class="about-panel">
+                    <article>
+                        <span class="mono-label">product thinking</span>
+                        <p>Interface boa nao e so bonita. Ela orienta, reduz ruido e da confianca para quem usa.</p>
+                    </article>
+                    <article>
+                        <span class="mono-label">implementation</span>
+                        <p>Consigo transitar entre front-end, mobile e base de back-end sem perder organizacao.</p>
+                    </article>
+                    <article>
+                        <span class="mono-label">growth mode</span>
+                        <p>Aprendo rapido, gosto de feedback e tenho interesse real em evoluir dentro de produto.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="stack" class="section-block">
+            <div class="shell reveal">
+                <div class="section-header">
+                    <span class="section-label">Stack</span>
+                    <h2>Tecnologia exposta do jeito certo: o suficiente para mostrar capacidade, sem ruido.</h2>
+                </div>
+
+                <div class="stack-grid">
+                    <article class="stack-card">
+                        <span class="mono-label">frontend systems</span>
+                        <h3>Interface e experiencia</h3>
+                        <div class="chip-row">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>TypeScript</span>
+                            <span>React</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </article>
+
+                    <article class="stack-card">
+                        <span class="mono-label">mobile workflows</span>
+                        <h3>Apps e navegacao</h3>
+                        <div class="chip-row">
+                            <span>React Native</span>
+                            <span>Expo</span>
+                            <span>Firebase</span>
+                            <span>UX mobile</span>
+                        </div>
+                    </article>
+
+                    <article class="stack-card">
+                        <span class="mono-label">services and data</span>
+                        <h3>Logica e persistencia</h3>
+                        <div class="chip-row">
+                            <span>Java</span>
+                            <span>Node.js</span>
+                            <span>SQL</span>
+                            <span>JDBC</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </article>
+
+                    <article class="stack-card">
+                        <span class="mono-label">workflow</span>
+                        <h3>Entrega e iteracao</h3>
+                        <div class="chip-row">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Versionamento</span>
+                            <span>Aprendizado rapido</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-block projects-section">
+            <div class="shell reveal">
+                <div class="section-header">
+                    <span class="section-label">Projetos</span>
+                    <h2>Projetos organizados como casos tecnicos, nao como vitrine solta.</h2>
+                </div>
+
+                <article class="featured-project">
+                    <div class="featured-copy">
+                        <span class="mono-label">featured build</span>
+                        <h3>CodeConnect</h3>
+                        <p>
+                            Plataforma para conectar desenvolvedores com foco em compartilhamento de codigo, colaboracao em projetos e networking.
+                            O projeto mostra como eu penso interface, estrutura e apresentacao de produto.
+                        </p>
+                        <div class="project-meta">
+                            <div>
+                                <strong>Stack</strong>
+                                <span>React / Node.js / MongoDB</span>
+                            </div>
+                            <div>
+                                <strong>Foco</strong>
+                                <span>fluxo de conteudo, comunidade e estrutura visual</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://codeconnect-red.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Abrir projeto</a>
+                            <a href="https://github.com/PH-Palmito/CodeConnect" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Repositorio</a>
+                        </div>
+                    </div>
+                    <div class="featured-media gradient-codeconnect">
+                        <img src="assets/CodeConnect.png" alt="Preview do projeto CodeConnect">
+                    </div>
+                </article>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-thumb gradient-ponto">
+                            <img src="assets/ponto.png" alt="Preview do projeto PontoCerto">
+                        </div>
+                        <div class="project-body">
+                            <span class="mono-label">mobile build</span>
+                            <h3>PontoCerto</h3>
+                            <p>Aplicativo de registro de jornada com calculo de horas, saldo diario e acompanhamento operacional.</p>
+                            <div class="project-meta compact">
+                                <div><strong>Stack</strong><span>React Native / TypeScript / Node.js</span></div>
+                                <div><strong>Foco</strong><span>fluxo de uso, tempo e produtividade</span></div>
+                            </div>
+                            <a href="https://github.com/PH-Palmito/PontoCerto" target="_blank" rel="noopener noreferrer" class="text-link">Ver repositorio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb gradient-fokus">
+                            <img src="assets/fokus.png" alt="Preview do projeto Fokus">
+                        </div>
+                        <div class="project-body">
+                            <span class="mono-label">productivity app</span>
+                            <h3>Fokus</h3>
+                            <p>Aplicacao de foco com Pomodoro e lista de tarefas, pensada para rotina de estudo e trabalho.</p>
+                            <div class="project-meta compact">
+                                <div><strong>Stack</strong><span>JavaScript / HTML / CSS</span></div>
+                                <div><strong>Foco</strong><span>tempo, tarefas e clareza de uso</span></div>
+                            </div>
+                            <div class="inline-links">
+                                <a href="https://ph-palmito.github.io/Fokus-projeto-Alura/" target="_blank" rel="noopener noreferrer" class="text-link">Abrir <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://github.com/PH-Palmito/Fokus-projeto-Alura" target="_blank" rel="noopener noreferrer" class="text-link">Repositorio <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb gradient-helia">
+                            <img src="assets/Helia - Thumbnails Figma.png" alt="Preview do projeto Helia">
+                        </div>
+                        <div class="project-body">
+                            <span class="mono-label">mobile marketplace</span>
+                            <h3>Helia</h3>
+                            <p>Aplicativo de aluguel de casas com proposta mobile moderna e fluxo de descoberta de imoveis.</p>
+                            <div class="project-meta compact">
+                                <div><strong>Stack</strong><span>React Native / TypeScript / Firebase</span></div>
+                                <div><strong>Foco</strong><span>listagem, navegacao e experiencia mobile</span></div>
+                            </div>
+                            <a href="https://github.com/PH-Palmito/Helia" target="_blank" rel="noopener noreferrer" class="text-link">Ver repositorio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb gradient-calirise thumb-placeholder">
+                            <span class="thumb-kicker">mobile progression</span>
+                            <strong>CaliRise</strong>
+                            <p>Skill tree para calistenia com navegacao visual e progressao inspirada em RPG.</p>
+                        </div>
+                        <div class="project-body">
+                            <span class="mono-label">mobile system</span>
+                            <h3>CaliRise</h3>
+                            <p>Aplicativo mobile para treino de calistenia baseado em arvore de habilidades, com estrutura visual de progressao e navegacao focada em descoberta.</p>
+                            <div class="project-meta compact">
+                                <div><strong>Stack</strong><span>TypeScript / React Native / Gesture Handler</span></div>
+                                <div><strong>Foco</strong><span>progressao visual, zoom e pan, componentizacao modular</span></div>
+                            </div>
+                            <a href="https://github.com/PH-Palmito/CaliRise" target="_blank" rel="noopener noreferrer" class="text-link">Ver repositorio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-body body-only">
+                            <span class="mono-label">java backend</span>
+                            <h3>Sistema de Gestao de Espacos</h3>
+                            <p>Projeto para reservas, avaliacao de solicitacoes e historico de uso em ambientes laboratoriais.</p>
+                            <div class="project-meta compact">
+                                <div><strong>Stack</strong><span>Java / JDBC / PostgreSQL</span></div>
+                                <div><strong>Foco</strong><span>regras de reserva e persistencia</span></div>
+                            </div>
+                            <a href="https://github.com/PH-Palmito/ReservaEspacosJDBC" target="_blank" rel="noopener noreferrer" class="text-link">Ver repositorio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-body body-only">
+                            <span class="mono-label">java backend</span>
+                            <h3>Sistema de Restaurante</h3>
+                            <p>Sistema para controle de pedidos, cardapio, mesas e contas, com pratica de POO e estrutura de regras.</p>
+                            <div class="project-meta compact">
+                                <div><strong>Stack</strong><span>Java / JDBC / PostgreSQL</span></div>
+                                <div><strong>Foco</strong><span>logica de negocio e organizacao</span></div>
+                            </div>
+                            <a href="https://github.com/PH-Palmito/ReservaEspacosJDBC" target="_blank" rel="noopener noreferrer" class="text-link">Ver repositorio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb gradient-estagiario thumb-placeholder">
+                            <span class="thumb-kicker">python architecture</span>
+                            <strong>estagiario</strong>
+                            <p>Estrutura modular com camadas para core, memoria, voz e integracao com LLM.</p>
+                        </div>
+                        <div class="project-body">
+                            <span class="mono-label">python experiment</span>
+                            <h3>estagiario</h3>
+                            <p>Projeto em evolucao com arquitetura modular em Python, organizado em camadas para logica principal, memoria, voz e integracao com modelos.</p>
+                            <div class="project-meta compact">
+                                <div><strong>Stack</strong><span>Python / LLM integration / Voice modules</span></div>
+                                <div><strong>Foco</strong><span>organizacao de sistema, modularidade e iteracao tecnica</span></div>
+                            </div>
+                            <a href="https://github.com/PH-Palmito/estagiario" target="_blank" rel="noopener noreferrer" class="text-link">Ver repositorio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb gradient-future">
+                            <img src="assets/breve.jpeg" alt="Projeto em desenvolvimento">
+                        </div>
+                        <div class="project-body">
+                            <span class="mono-label">next build</span>
+                            <h3>Task Manager</h3>
+                            <p>Aplicativo mobile em evolucao para tarefas com sincronizacao em tempo real e notificacoes.</p>
+                            <div class="project-meta compact">
+                                <div><strong>Stack</strong><span>React Native / Firebase</span></div>
+                                <div><strong>Foco</strong><span>roadmap de produtividade mobile</span></div>
+                            </div>
+                            <span class="muted-inline">Em desenvolvimento.</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-block">
+            <div class="shell contact-grid reveal">
+                <div class="section-copy">
+                    <span class="section-label">Contato</span>
+                    <h2>Se voce procura alguem para crescer rapido e construir com intencao, vamos conversar.</h2>
+                    <p>
+                        Estou aberto a oportunidades de estagio, junior ou colaboracoes em projetos.
+                        Se fizer sentido para o seu time, meu contato esta logo aqui.
+                    </p>
+
+                    <div class="contact-list">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedropalmito.dev@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-envelope"></i>
+                            <span>pedropalmito.dev@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/PH-Palmito" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/PH-Palmito</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pedro-henrique-palmito" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/pedro-henrique-palmito</span>
+                        </a>
+                    </div>
+
+                    <div class="resume-links">
+                        <a href="assets/Curriculo_Pedro_Palmito.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visualizar curriculo</a>
+                        <a href="assets/Curriculo_Pedro_Palmito.pdf" download class="btn btn-primary">Baixar curriculo</a>
+                    </div>
+                </div>
+
+                <form id="contact-form" action="https://formspree.io/f/xanjakdr" method="POST" class="contact-panel">
+                    <div class="panel-topbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="form-header">
+                        <span class="mono-label">direct message</span>
+                        <h3>Enviar mensagem</h3>
+                        <p>Contato direto para oportunidade, proposta ou conversa tecnica.</p>
+                    </div>
+
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="voce@empresa.com" required>
+
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Escreva um pouco sobre a oportunidade ou contexto." required></textarea>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar mensagem
+                    </button>
+
+                    <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-row">
+            <p>Pedro Palmito / portfolio orientado a produto, interface e implementacao funcional.</p>
+            <div class="footer-links">
+                <a href="https://github.com/PH-Palmito" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/pedro-henrique-palmito" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedropalmito.dev@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="main.js"></script>
 </body>
 </html>
