@@ -597,6 +597,14 @@ section {
   min-height: 380px;
 }
 
+.gradient-axel {
+  background: linear-gradient(135deg, #101828, #2563eb 55%, #14b8a6);
+}
+
+.gradient-financius {
+  background: linear-gradient(135deg, #06281f, #15803d 52%, #d6a737);
+}
+
 .gradient-codeconnect {
   background: linear-gradient(135deg, #12333d, #81fe88);
 }
