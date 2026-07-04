@@ -605,6 +605,10 @@ section {
   background: linear-gradient(135deg, #06281f, #15803d 52%, #d6a737);
 }
 
+.gradient-afinador {
+  background: linear-gradient(135deg, #020403, #111827 48%, #f4c84f);
+}
+
 .gradient-codeconnect {
   background: linear-gradient(135deg, #12333d, #81fe88);
 }
